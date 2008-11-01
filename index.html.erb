@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl">    
+<head>
+  <title>Formula!</title>
+  <script type="text/javascript">
+  var eqOld = "";
+  function update() 
+{
+     var eq = document.getElementById('formula').value;
+     eq = encodeURIComponent(eq);
+     if(eq != eqOld) { document.images[0].src = '/img/' + eq; }
+     eqOld = eq;
+}
+</script>
+</head>
+<body>
+Enter your secret forumla:</br>
+  <form action="/" method="post">
+    <textarea onkeyup="update()" "rows="10" cols="50" id="formula" name="formula"><%= params[:formula] %></textarea><br/>
+    <input type="submit" value="Create" />
+  <p><img src="<%= @img_url %>" /></p>
+</body>
+</html>
+
