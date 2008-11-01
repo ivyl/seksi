@@ -1,0 +1,9 @@
+This is simple LaTeX equation server (or whatever), used by me for some presentations. It uses external programs:
+* LaTeX
+* divps
+* convert (from ImageMagick)
+
+It needs access to /tmp
+
+Just run server by merb -I seksi.rb and type:
+\lim_{x\to\infty} \frac{x^2+2x}{x^3+2} 
