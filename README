@@ -5,5 +5,7 @@ This is simple LaTeX equation server (or whatever), used by me for some presenta
 
 It needs access to /tmp
 
-Just run server by merb -I seksi.rb and type:
+Just run server by 'merb -I seksi.rb -n seksi -m /tmp -l fatal -P /dev/null -l /dev/null -e production -p 1111', go to http://127.0.0.1:1111 and type:
 \lim_{x\to\infty} \frac{x^2+2x}{x^3+2} 
+
+If you want daemonize it add -d flag.
